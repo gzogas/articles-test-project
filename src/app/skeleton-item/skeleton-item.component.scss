@@ -1,0 +1,48 @@
+@import "../../styles/colors.scss";
+
+.skeleton-item {
+    margin-bottom: 15px;
+    box-shadow: rgb(99 99 99 / 15%) 0px 2px 8px 0px;
+    padding: 15px;
+    border-radius: 4px;
+
+    .skeleton-bar {
+        background-color: $light-grey;
+        height: 15px;
+        border-radius: 4px;
+        margin-bottom: 15px;
+        transform: scale(1);
+        animation: pulse-black 1.7s infinite;
+
+        &.small {
+            width: 10%;
+        }
+
+        &.medium {
+            width: 20%;
+        }
+
+        &.large {
+            width: 30%;
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+          }
+    }
+}
+
+// Demonstrates the pulse effect in skeleton items
+@keyframes pulse-black {
+    0% {
+       opacity: 1;
+    }
+ 
+    50% {
+       opacity: 0.5;
+    }
+ 
+    100% {
+       opacity: 1;
+    }
+ }

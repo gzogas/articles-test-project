@@ -1,0 +1,7 @@
+<div class="search-bar">
+    <div class="search">
+        <i class="fa fa-search"></i>
+        <input type="text" class="searchTerm" placeholder="Search by Title or Publisher" [(ngModel)]="searchTerm"
+            (ngModelChange)="searchDebouncer(); loaderService.loaderOn()">
+    </div>
+</div>

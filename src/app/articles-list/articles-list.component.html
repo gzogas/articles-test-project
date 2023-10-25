@@ -1,0 +1,15 @@
+<div class="articles-container">
+    <div class="articles-content">
+        <h1 class="header">
+            Articles
+        </h1>
+        <search-bar (triggerSearch)="filterArticles($event)"></search-bar>
+        <div class="articles-list">
+            <ng-container *ngIf="!(loader$ | async)">
+                <article class="article-item" *ngFor="let article of filteredArticles" [article]="article"></article>
+            </ng-container>
+            <loader></loader>
+            <empty-results *ngIf="!filteredArticles.length && !(loader$ | async)"></empty-results>
+        </div>
+    </div>
+</div>

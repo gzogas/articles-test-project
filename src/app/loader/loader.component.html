@@ -1,0 +1,3 @@
+<div *ngIf="loaderService.loading$ | async">
+    <skeleton-item *ngFor="let skeleton of skeletonItems"></skeleton-item>
+</div>

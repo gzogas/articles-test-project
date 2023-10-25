@@ -1,0 +1,58 @@
+@import "../../styles/colors.scss";
+
+.article-item {
+    margin-bottom: 20px;
+    box-shadow: rgb(99 99 99 / 15%) 0px 2px 8px 0px;
+    border-radius: 4px;
+
+    &:hover {
+        box-shadow: rgb(219, 112, 201, 0.4) 0px 2px 8px 0px;
+    }
+
+    .header {
+        h4 {
+            border-top-right-radius: 4px;
+            border-top-left-radius: 4px;
+            padding: 15px;
+            margin: 0;
+            background-color: rgb(178,115,209, 0.5);
+            font-weight: normal;
+        }
+    }
+
+    .body {
+        padding: 15px;
+        display: flex;
+
+        .part {
+            width: 50%;
+            h5 {
+                font-weight: bold;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.5;
+                letter-spacing: -0.19px;
+                color: $purple;
+                display: inline;
+            }
+
+            p {
+                display: inline;
+                font-size: 14px;
+            }
+
+            &.right {
+                .read-time {
+                    font-size: 11px;
+                    text-align: end;
+                    float: right;
+                    width: fit-content;
+                    background-color: $light-grey;
+                    padding: 5px;
+                    border-radius: 4px;
+                    color: rgb(117, 111, 216);
+                }
+            }
+        }
+    }
+}
